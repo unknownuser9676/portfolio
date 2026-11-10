@@ -1,0 +1,553 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#11110f" />
+    <meta
+      name="description"
+      content="Adesh — creative mind, curious builder, and explorer of ideas. A personal digital space from Nairobi, Kenya."
+    />
+    <meta property="og:title" content="Adesh — A Personal Digital Universe" />
+    <meta
+      property="og:description"
+      content="Curiosity, creative experiments, technology and things yet to be made."
+    />
+    <title>Adesh® — A World in Progress</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" type="module"></script>
+  </head>
+
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+    <div class="cursor cursor-dot" aria-hidden="true"></div>
+    <div class="cursor cursor-ring" aria-hidden="true"></div>
+
+    <div class="loader" id="loader" aria-label="Loading">
+      <div class="loader-mark">A<span>®</span></div>
+      <div class="loader-bottom">
+        <span>INITIALISING EXPERIENCE</span>
+        <span id="loader-count">00</span>
+      </div>
+      <div class="loader-track"><span id="loader-progress"></span></div>
+    </div>
+
+    <header class="topbar">
+      <a href="#home" class="brand" aria-label="Adesh home">
+        <span class="brand-symbol">A</span>
+        <span class="brand-name">ADESH<span class="brand-dot">®</span></span>
+      </a>
+
+      <div class="topbar-location">
+        <span class="status-light"></span>
+        <span>NAIROBI, KE</span>
+        <span class="topbar-divider">/</span>
+        <span class="topbar-coordinate">01°17' S · 36°49' E</span>
+      </div>
+
+      <button
+        class="menu-trigger"
+        id="menu-trigger"
+        aria-expanded="false"
+        aria-controls="navigation"
+      >
+        <span class="menu-trigger-label">EXPLORE</span>
+        <span class="menu-icon"><i></i><i></i></span>
+      </button>
+    </header>
+
+    <nav class="navigation" id="navigation" aria-hidden="true">
+      <div class="navigation-top">
+        <span>INDEX / 001—006</span>
+        <span>SELECT A DESTINATION</span>
+      </div>
+      <div class="navigation-links">
+        <a href="#home" data-nav-close
+          ><span>01</span> The beginning <i>↗</i></a
+        >
+        <a href="#about" data-nav-close><span>02</span> The mind <i>↗</i></a>
+        <a href="#exhibitions" data-nav-close
+          ><span>03</span> Exhibitions <i>↗</i></a
+        >
+        <a href="#laboratory" data-nav-close
+          ><span>04</span> Laboratory <i>↗</i></a
+        >
+        <a href="#archive" data-nav-close><span>05</span> Archive <i>↗</i></a>
+        <a href="#contact" data-nav-close
+          ><span>06</span> Make contact <i>↗</i></a
+        >
+      </div>
+      <div class="navigation-bottom">
+        <span>A PERSONAL DIGITAL SPACE</span>
+        <span>EST. IN CURIOSITY</span>
+      </div>
+    </nav>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-grid"></div>
+        <div class="hero-orbit orbit-one"></div>
+        <div class="hero-orbit orbit-two"></div>
+
+        <div class="hero-meta hero-meta-left">
+          <span class="eyebrow">INDEPENDENT MIND / 001</span>
+          <span class="hero-meta-line"></span>
+          <span class="hero-meta-small">A WORLD IN PROGRESS</span>
+        </div>
+
+        <div class="hero-meta hero-meta-right">
+          <span>PERSONAL ARCHIVE</span>
+          <span>VOL. 01 — 2026</span>
+        </div>
+
+        <div class="hero-art" id="hero-art">
+          <canvas
+            id="art-canvas"
+            aria-label="Interactive abstract 3D sculpture"
+          ></canvas>
+          <div class="art-caption">
+            <span>FIG. 001</span>
+            <span>FORM / MOTION / POSSIBILITY</span>
+          </div>
+          <div class="art-crosshair crosshair-one">+</div>
+          <div class="art-crosshair crosshair-two">+</div>
+        </div>
+
+        <div class="hero-content">
+          <p class="hero-kicker reveal">
+            A LITTLE BIT OF EVERYTHING. A LOT OF CURIOSITY.
+          </p>
+          <h1 class="hero-title reveal">
+            The world<br />
+            according to<br />
+            <span class="hero-name"
+              >Adesh<span class="hero-period">.</span></span
+            >
+          </h1>
+          <div class="hero-bottom reveal">
+            <p class="hero-description">
+              Somewhere between ideas and execution.<br />
+              Exploring the things that make me curious.
+            </p>
+            <a class="discover-link magnetic" href="#about">
+              <span class="discover-icon">↓</span>
+              <span>ENTER THE UNKNOWN</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-side-note">SCROLL TO WANDER <span>↓</span></div>
+        <div class="hero-index">01 <span>/</span> 06</div>
+      </section>
+
+      <div
+        class="ticker"
+        aria-label="Curiosity, creativity, experimentation and possibility"
+      >
+        <div class="ticker-track">
+          <span>CURIOUS BY NATURE</span><b>✳</b> <span>BUILT TO EXPLORE</span
+          ><b>✳</b> <span>ALWAYS IN PROGRESS</span><b>✳</b>
+          <span>CURIOUS BY NATURE</span><b>✳</b> <span>BUILT TO EXPLORE</span
+          ><b>✳</b> <span>ALWAYS IN PROGRESS</span><b>✳</b>
+        </div>
+      </div>
+
+      <section class="section about-section" id="about">
+        <div class="section-heading">
+          <span class="section-index">01 / THE MIND</span>
+          <span class="section-note">A SMALL INTRODUCTION</span>
+        </div>
+
+        <div class="about-layout">
+          <div class="about-aside reveal">
+            <div class="aside-symbol">A<span>·</span></div>
+            <p>NOT A FINISHED STORY.<br />NOT EVEN CLOSE.</p>
+            <span class="aside-line"></span>
+            <span class="mono tiny">SUBJECT / ADESH</span>
+          </div>
+
+          <div class="about-main">
+            <h2 class="editorial-heading reveal">
+              I find myself<br />
+              drawn to <em>what's possible.</em>
+            </h2>
+            <div class="about-copy reveal">
+              <p class="large-copy">
+                I'm Adesh — a curious mind from Nairobi, interested in the space
+                where technology, design and imagination meet.
+              </p>
+              <p>
+                I like understanding how things work, questioning how they could
+                work differently, and turning ideas into something tangible.
+                Sometimes that's a useful tool. Sometimes it's a visual
+                experiment. Sometimes it's just a question I can't leave alone.
+              </p>
+              <p>
+                My interests don't fit neatly into one category, and I don't
+                particularly want them to. I'm drawn to building, creative
+                problem-solving, thoughtful design, music, film and the endless
+                possibilities of technology.
+              </p>
+              <p class="about-signoff">
+                Still learning. Still becoming. <em>Still curious.</em>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-footnote">
+          <span>AN OPEN-ENDED EXPLORATION</span>
+          <span>NAIROBI, KENYA — EARTH</span>
+        </div>
+      </section>
+
+      <section class="section exhibitions-section" id="exhibitions">
+        <div class="section-heading">
+          <span class="section-index">02 / SELECTED WORK</span>
+          <span class="section-note">THE EXHIBITION SPACE</span>
+        </div>
+
+        <div class="exhibition-intro reveal">
+          <h2 class="editorial-heading">
+            Things made.<br /><em>Things imagined.</em>
+          </h2>
+          <p>
+            Not everything here is a finished product. Some things are
+            contributions, some are explorations, and some are ideas taking
+            shape. Each is labelled honestly.
+          </p>
+        </div>
+
+        <div class="project-list">
+          <article
+            class="project-card project-featured reveal"
+            tabindex="0"
+            role="button"
+            data-project="albanian"
+            aria-label="Explore Albanian Ice Cream project"
+          >
+            <div class="project-visual project-visual-ice">
+              <div class="ice-orbit ice-orbit-a"></div>
+              <div class="ice-orbit ice-orbit-b"></div>
+              <div class="ice-center">A<span>®</span></div>
+              <div class="ice-side-text">BRAND / VISUAL IDENTITY / MENU</div>
+              <span class="visual-number">01</span>
+            </div>
+            <div class="project-info">
+              <div class="project-topline">
+                <span>CONTRIBUTION / VISUAL DESIGN</span>
+                <span>2026</span>
+              </div>
+              <div class="project-title-row">
+                <h3>Albanian<br /><em>Ice Cream.</em></h3>
+                <span class="project-arrow">↗</span>
+              </div>
+              <p>
+                Visual identity, menu design and a little exploration into the
+                world of a neighbourhood ice cream business.
+              </p>
+              <div class="project-tags">
+                <span>BRANDING</span><span>DESIGN</span
+                ><span>SMALL BUSINESS</span>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="project-card project-secondary reveal"
+            tabindex="0"
+            role="button"
+            data-project="stockroom"
+            aria-label="Explore Stockroom concept"
+          >
+            <div class="project-visual project-visual-stock">
+              <div class="stock-window">
+                <div class="stock-window-top">
+                  <span></span><span></span><span></span><b>STOCKROOM / 001</b>
+                </div>
+                <div class="stock-window-body">
+                  <div class="stock-label">INVENTORY OVERVIEW</div>
+                  <div class="stock-big">01<span>—</span>∞</div>
+                  <div class="stock-bars">
+                    <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i
+                    ><i></i>
+                  </div>
+                  <div class="stock-bottom">
+                    <span>TRACK</span><span>UNDERSTAND</span
+                    ><span>IMPROVE</span>
+                  </div>
+                </div>
+              </div>
+              <span class="visual-number">02</span>
+            </div>
+            <div class="project-info">
+              <div class="project-topline">
+                <span>CONCEPT / TOOL EXPLORATION</span>
+                <span>IN PROGRESS</span>
+              </div>
+              <div class="project-title-row">
+                <h3>Stockroom<span class="title-period">.</span></h3>
+                <span class="project-arrow">↗</span>
+              </div>
+              <p>
+                An exploration of a simple way to understand stock, sales and
+                the everyday numbers behind a small business.
+              </p>
+              <div class="project-tags">
+                <span>PRODUCT THINKING</span><span>INTERFACE</span
+                ><span>CONCEPT</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="exhibition-foot">
+          <span>THE COLLECTION IS OPEN-ENDED</span>
+          <span>MORE TO COME <b>↗</b></span>
+        </div>
+      </section>
+
+      <section class="laboratory-section" id="laboratory">
+        <div class="lab-background-mark">LAB</div>
+        <div class="section section-inner">
+          <div class="section-heading">
+            <span class="section-index">03 / THE LABORATORY</span>
+            <span class="section-note">WORK IN PROGRESS</span>
+          </div>
+
+          <div class="lab-heading reveal">
+            <span class="lab-stamp">NO FINAL<br />ANSWERS HERE</span>
+            <h2 class="editorial-heading">
+              An idea is<br />just the <em>beginning.</em>
+            </h2>
+          </div>
+
+          <p class="lab-intro reveal">
+            This is where curiosity gets its hands dirty. Unfinished thoughts,
+            prototypes, experiments and possibilities that may become something
+            more.
+          </p>
+
+          <div class="lab-grid">
+            <article class="lab-item reveal">
+              <span class="lab-item-number">LAB / 001</span>
+              <div class="lab-shape lab-shape-one"><span></span></div>
+              <h3>Interfaces with a point of view</h3>
+              <p>
+                Exploring how digital experiences can feel expressive, intuitive
+                and a little unexpected.
+              </p>
+              <span class="lab-status"><i></i> ONGOING INTEREST</span>
+            </article>
+            <article class="lab-item reveal">
+              <span class="lab-item-number">LAB / 002</span>
+              <div class="lab-shape lab-shape-two"><span></span></div>
+              <h3>Useful things, built simply</h3>
+              <p>
+                Thinking about small tools that solve real everyday problems
+                without unnecessary complexity.
+              </p>
+              <span class="lab-status"><i></i> EXPLORING</span>
+            </article>
+            <article class="lab-item reveal">
+              <span class="lab-item-number">LAB / 003</span>
+              <div class="lab-shape lab-shape-three"><span></span></div>
+              <h3>Technology as a creative medium</h3>
+              <p>
+                Finding the interesting territory between code, interaction,
+                visual art and experimentation.
+              </p>
+              <span class="lab-status"><i></i> OPEN ENDED</span>
+            </article>
+          </div>
+          <div class="lab-footer">
+            <span>EXPERIMENTS MAY CHANGE WITHOUT NOTICE.</span
+            ><span>THAT'S THE POINT. ↗</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section archive-section" id="archive">
+        <div class="section-heading">
+          <span class="section-index">04 / THE ARCHIVE</span>
+          <span class="section-note">FRAGMENTS OF A CURIOUS MIND</span>
+        </div>
+
+        <div class="archive-intro reveal">
+          <h2 class="editorial-heading">
+            A collection of<br /><em>things that stay with me.</em>
+          </h2>
+          <p>
+            Not a list of achievements. Just a few things that keep my mind
+            occupied.
+          </p>
+        </div>
+
+        <div class="archive-grid">
+          <div class="archive-card archive-card-large reveal">
+            <span class="archive-card-index">A / 001</span>
+            <div class="archive-visual archive-visual-film">
+              <div class="film-frame"><span>PLAY</span></div>
+              <div class="film-caption">THE ART OF SEEING</div>
+            </div>
+            <div class="archive-card-copy">
+              <span>01 — VISUAL CULTURE</span>
+              <h3>Music, film<br />& the feeling between frames.</h3>
+              <p>
+                Stories, sound, atmosphere and the details that make an
+                experience linger.
+              </p>
+            </div>
+          </div>
+
+          <div class="archive-card reveal">
+            <span class="archive-card-index">A / 002</span>
+            <div class="archive-visual archive-visual-ideas">
+              <div class="idea-orbit"><span>?</span></div>
+              <span class="idea-note">QUESTION EVERYTHING</span>
+            </div>
+            <div class="archive-card-copy">
+              <span>02 — CURIOSITY</span>
+              <h3>Questions worth following.</h3>
+              <p>
+                Ideas, rabbit holes and the pleasure of not knowing everything.
+              </p>
+            </div>
+          </div>
+
+          <div class="archive-card reveal">
+            <span class="archive-card-index">A / 003</span>
+            <div class="archive-visual archive-visual-form">
+              <div class="form-object"></div>
+              <span class="form-coordinate">FORM STUDY / 03</span>
+            </div>
+            <div class="archive-card-copy">
+              <span>03 — DESIGN & FORM</span>
+              <h3>Finding beauty in function.</h3>
+              <p>
+                Visual language, thoughtful details and the relationship between
+                form and purpose.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="manifesto-section">
+        <div class="manifesto-top">
+          <span>05 / A PERSONAL NOTE</span
+          ><span>NOT A MANIFESTO. JUST A REMINDER.</span>
+        </div>
+        <div class="manifesto-content reveal">
+          <span class="manifesto-mark">“</span>
+          <h2>Stay curious.<br />Make something.<br /><em>Begin again.</em></h2>
+        </div>
+        <div class="manifesto-bottom">
+          <span>THERE IS ALWAYS MORE TO DISCOVER.</span>
+          <span>— A.</span>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contact">
+        <div class="section-heading">
+          <span class="section-index">06 / OPEN CHANNEL</span>
+          <span class="section-note">END OF THE BEGINNING</span>
+        </div>
+
+        <div class="contact-layout">
+          <div class="contact-main reveal">
+            <span class="contact-overline">SOMETHING ON YOUR MIND?</span>
+            <h2 class="editorial-heading">
+              Let's see<br />where <em>it goes.</em>
+            </h2>
+            <p>
+              Ideas, interesting conversations, creative collaborations or
+              simply a hello. My inbox is open.
+            </p>
+            <a
+              class="contact-email magnetic"
+              href="mailto:adeshmoha20@gmail.com"
+            >
+              <span>adeshmoha20@gmail.com</span><b>↗</b>
+            </a>
+          </div>
+          <div class="contact-aside reveal">
+            <div class="contact-orbit">
+              <span>A</span>
+              <i></i><i></i><i></i>
+            </div>
+            <span class="contact-aside-caption">A SIGNAL FROM NAIROBI</span>
+            <span class="contact-aside-small"
+              >AVAILABLE FOR<br />INTERESTING CONVERSATIONS</span
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <a class="footer-mark" href="#home">A.</a>
+      <div class="footer-middle">
+        <span>A PERSONAL DIGITAL UNIVERSE</span>
+        <span>MADE WITH CURIOSITY IN NAIROBI, KENYA.</span>
+      </div>
+      <div class="footer-right">
+        <a
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=adeshmoha20%40gmail.com&su=Hello%20Adesh"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="contact-email magnetic"
+        >
+          Let's talk
+          <b>↗</b>
+        </a>
+        <a href="#home">BACK TO THE BEGINNING ↑</a>
+      </div>
+      <div class="footer-bottom">
+        <span>© ADESH 2026</span>
+        <span>NO FINISHED STORIES. JUST NEW CHAPTERS.</span>
+        <span>END / 006</span>
+      </div>
+    </footer>
+
+    <div
+      class="project-modal"
+      id="project-modal"
+      aria-hidden="true"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-title"
+    >
+      <button
+        class="modal-close"
+        id="modal-close"
+        aria-label="Close project details"
+      >
+        CLOSE <span>×</span>
+      </button>
+      <div class="modal-content" id="modal-content"></div>
+    </div>
+
+    <div
+      class="secret-message"
+      id="secret-message"
+      role="status"
+      aria-live="polite"
+    >
+      <span>YOU FOUND SOMETHING.</span>
+      <p>Not everything needs to be discovered at once.</p>
+      <button id="secret-close">CLOSE ×</button>
+    </div>
+
+    <div class="page-progress" aria-hidden="true">
+      <span id="page-progress-fill"></span>
+    </div>
+  </body>
+</html>
