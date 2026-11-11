@@ -4,550 +4,1117 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#11110f" />
+
     <meta
       name="description"
-      content="Adesh — creative mind, curious builder, and explorer of ideas. A personal digital space from Nairobi, Kenya."
+      content="Adesh — Creative developer, independent thinker and builder exploring technology, intelligence, design and the possibilities beyond the conventional."
     />
-    <meta property="og:title" content="Adesh — A Personal Digital Universe" />
+
+    <meta property="og:title" content="Adesh® — A World in Progress" />
     <meta
       property="og:description"
-      content="Curiosity, creative experiments, technology and things yet to be made."
+      content="Understand deeply. Question relentlessly. Create beyond expectation."
     />
+    <meta property="og:type" content="website" />
+
     <title>Adesh® — A World in Progress</title>
 
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js" type="module"></script>
+
+    <!-- Three-dimensional experience -->
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js"
+        }
+      }
+    </script>
+
+    <script type="module" src="script.js"></script>
   </head>
 
   <body>
-    <div class="noise" aria-hidden="true"></div>
-    <div class="cursor cursor-dot" aria-hidden="true"></div>
-    <div class="cursor cursor-ring" aria-hidden="true"></div>
-
-    <div class="loader" id="loader" aria-label="Loading">
-      <div class="loader-mark">A<span>®</span></div>
-      <div class="loader-bottom">
-        <span>INITIALISING EXPERIENCE</span>
-        <span id="loader-count">00</span>
+    <div class="site-loader" id="loader">
+      <div class="loader-inner">
+        <span class="loader-mark">A®</span>
+        <div class="loader-line"><span></span></div>
+        <span class="loader-label">INITIALISING A WORLD IN PROGRESS</span>
       </div>
-      <div class="loader-track"><span id="loader-progress"></span></div>
     </div>
 
-    <header class="topbar">
-      <a href="#home" class="brand" aria-label="Adesh home">
-        <span class="brand-symbol">A</span>
-        <span class="brand-name">ADESH<span class="brand-dot">®</span></span>
+    <div class="noise-overlay"></div>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- NAVIGATION -->
+    <header class="site-header" id="top">
+      <a href="#home" class="brand" aria-label="Adesh home" data-secret-trigger>
+        ADESH<span>®</span>
       </a>
 
-      <div class="topbar-location">
-        <span class="status-light"></span>
-        <span>NAIROBI, KE</span>
-        <span class="topbar-divider">/</span>
-        <span class="topbar-coordinate">01°17' S · 36°49' E</span>
-      </div>
-
       <button
-        class="menu-trigger"
-        id="menu-trigger"
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Open navigation"
         aria-expanded="false"
-        aria-controls="navigation"
       >
-        <span class="menu-trigger-label">EXPLORE</span>
-        <span class="menu-icon"><i></i><i></i></span>
+        <span></span>
+        <span></span>
       </button>
+
+      <nav class="main-nav" id="mainNav">
+        <a href="#mind">The Mind</a>
+        <a href="#work">Selected Work</a>
+        <a href="#laboratory">Laboratory</a>
+        <a href="#observatory">Observatory</a>
+        <a href="#archive">Archive</a>
+        <a href="#contact" class="nav-contact">Let's talk <span>↗</span></a>
+      </nav>
     </header>
 
-    <nav class="navigation" id="navigation" aria-hidden="true">
-      <div class="navigation-top">
-        <span>INDEX / 001—006</span>
-        <span>SELECT A DESTINATION</span>
-      </div>
-      <div class="navigation-links">
-        <a href="#home" data-nav-close
-          ><span>01</span> The beginning <i>↗</i></a
-        >
-        <a href="#about" data-nav-close><span>02</span> The mind <i>↗</i></a>
-        <a href="#exhibitions" data-nav-close
-          ><span>03</span> Exhibitions <i>↗</i></a
-        >
-        <a href="#laboratory" data-nav-close
-          ><span>04</span> Laboratory <i>↗</i></a
-        >
-        <a href="#archive" data-nav-close><span>05</span> Archive <i>↗</i></a>
-        <a href="#contact" data-nav-close
-          ><span>06</span> Make contact <i>↗</i></a
-        >
-      </div>
-      <div class="navigation-bottom">
-        <span>A PERSONAL DIGITAL SPACE</span>
-        <span>EST. IN CURIOSITY</span>
-      </div>
-    </nav>
-
     <main>
-      <section class="hero" id="home">
-        <div class="hero-grid"></div>
-        <div class="hero-orbit orbit-one"></div>
-        <div class="hero-orbit orbit-two"></div>
-
-        <div class="hero-meta hero-meta-left">
-          <span class="eyebrow">INDEPENDENT MIND / 001</span>
-          <span class="hero-meta-line"></span>
-          <span class="hero-meta-small">A WORLD IN PROGRESS</span>
-        </div>
-
-        <div class="hero-meta hero-meta-right">
-          <span>PERSONAL ARCHIVE</span>
-          <span>VOL. 01 — 2026</span>
-        </div>
-
-        <div class="hero-art" id="hero-art">
-          <canvas
-            id="art-canvas"
-            aria-label="Interactive abstract 3D sculpture"
-          ></canvas>
-          <div class="art-caption">
-            <span>FIG. 001</span>
-            <span>FORM / MOTION / POSSIBILITY</span>
-          </div>
-          <div class="art-crosshair crosshair-one">+</div>
-          <div class="art-crosshair crosshair-two">+</div>
+      <!-- 01. OPENING -->
+      <section class="hero section" id="home">
+        <div class="hero-meta">
+          <span>INDEPENDENT THINKER / BUILDER</span>
+          <span>NAIROBI, KENYA</span>
         </div>
 
         <div class="hero-content">
-          <p class="hero-kicker reveal">
-            A LITTLE BIT OF EVERYTHING. A LOT OF CURIOSITY.
-          </p>
+          <p class="eyebrow reveal">A PERSONAL UNIVERSE · EST. IN PROGRESS</p>
+
           <h1 class="hero-title reveal">
-            The world<br />
-            according to<br />
-            <span class="hero-name"
-              >Adesh<span class="hero-period">.</span></span
-            >
+            A world<br />
+            <span class="serif-italic">in progress.</span>
           </h1>
+
           <div class="hero-bottom reveal">
             <p class="hero-description">
-              Somewhere between ideas and execution.<br />
-              Exploring the things that make me curious.
+              I am Adesh. A developer in pursuit of ideas, systems and
+              experiences that challenge the boundaries of what technology can
+              become.
             </p>
-            <a class="discover-link magnetic" href="#about">
-              <span class="discover-icon">↓</span>
-              <span>ENTER THE UNKNOWN</span>
+
+            <a href="#mind" class="explore-link">
+              EXPLORE THE MIND
+              <span class="explore-arrow">↓</span>
             </a>
           </div>
         </div>
 
-        <div class="hero-side-note">SCROLL TO WANDER <span>↓</span></div>
-        <div class="hero-index">01 <span>/</span> 06</div>
+        <div class="hero-art" id="heroArt">
+          <canvas id="universeCanvas"></canvas>
+          <div class="art-caption">
+            <span>FIG. 001</span>
+            <span>AN EXPLORATION OF FORM</span>
+          </div>
+        </div>
+
+        <div class="hero-footer">
+          <span>UNDERSTAND DEEPLY.</span>
+          <span>QUESTION RELENTLESSLY.</span>
+          <span>CREATE BEYOND EXPECTATION.</span>
+        </div>
       </section>
 
-      <div
-        class="ticker"
-        aria-label="Curiosity, creativity, experimentation and possibility"
-      >
-        <div class="ticker-track">
-          <span>CURIOUS BY NATURE</span><b>✳</b> <span>BUILT TO EXPLORE</span
-          ><b>✳</b> <span>ALWAYS IN PROGRESS</span><b>✳</b>
-          <span>CURIOUS BY NATURE</span><b>✳</b> <span>BUILT TO EXPLORE</span
-          ><b>✳</b> <span>ALWAYS IN PROGRESS</span><b>✳</b>
-        </div>
-      </div>
-
-      <section class="section about-section" id="about">
+      <!-- 02. MANIFESTO -->
+      <section class="manifesto section" id="mind">
         <div class="section-heading">
           <span class="section-index">01 / THE MIND</span>
-          <span class="section-note">A SMALL INTRODUCTION</span>
+          <span class="section-note">A STATEMENT OF INTENT</span>
         </div>
 
-        <div class="about-layout">
-          <div class="about-aside reveal">
-            <div class="aside-symbol">A<span>·</span></div>
-            <p>NOT A FINISHED STORY.<br />NOT EVEN CLOSE.</p>
-            <span class="aside-line"></span>
-            <span class="mono tiny">SUBJECT / ADESH</span>
-          </div>
+        <div class="manifesto-content">
+          <p class="eyebrow">FIRST, A WAY OF THINKING</p>
 
-          <div class="about-main">
-            <h2 class="editorial-heading reveal">
-              I find myself<br />
-              drawn to <em>what's possible.</em>
-            </h2>
-            <div class="about-copy reveal">
-              <p class="large-copy">
-                I'm Adesh — a curious mind from Nairobi, interested in the space
-                where technology, design and imagination meet.
-              </p>
-              <p>
-                I like understanding how things work, questioning how they could
-                work differently, and turning ideas into something tangible.
-                Sometimes that's a useful tool. Sometimes it's a visual
-                experiment. Sometimes it's just a question I can't leave alone.
-              </p>
-              <p>
-                My interests don't fit neatly into one category, and I don't
-                particularly want them to. I'm drawn to building, creative
-                problem-solving, thoughtful design, music, film and the endless
-                possibilities of technology.
-              </p>
-              <p class="about-signoff">
-                Still learning. Still becoming. <em>Still curious.</em>
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="about-footnote">
-          <span>AN OPEN-ENDED EXPLORATION</span>
-          <span>NAIROBI, KENYA — EARTH</span>
-        </div>
-      </section>
-
-      <section class="section exhibitions-section" id="exhibitions">
-        <div class="section-heading">
-          <span class="section-index">02 / SELECTED WORK</span>
-          <span class="section-note">THE EXHIBITION SPACE</span>
-        </div>
-
-        <div class="exhibition-intro reveal">
-          <h2 class="editorial-heading">
-            Things made.<br /><em>Things imagined.</em>
+          <h2 class="manifesto-title reveal">
+            The known is a starting point,
+            <span class="serif-italic">not a boundary.</span>
           </h2>
-          <p>
-            Not everything here is a finished product. Some things are
-            contributions, some are explorations, and some are ideas taking
-            shape. Each is labelled honestly.
-          </p>
-        </div>
 
-        <div class="project-list">
-          <article
-            class="project-card project-featured reveal"
-            tabindex="0"
-            role="button"
-            data-project="albanian"
-            aria-label="Explore Albanian Ice Cream project"
-          >
-            <div class="project-visual project-visual-ice">
-              <div class="ice-orbit ice-orbit-a"></div>
-              <div class="ice-orbit ice-orbit-b"></div>
-              <div class="ice-center">A<span>®</span></div>
-              <div class="ice-side-text">BRAND / VISUAL IDENTITY / MENU</div>
-              <span class="visual-number">01</span>
-            </div>
-            <div class="project-info">
-              <div class="project-topline">
-                <span>CONTRIBUTION / VISUAL DESIGN</span>
-                <span>2026</span>
-              </div>
-              <div class="project-title-row">
-                <h3>Albanian<br /><em>Ice Cream.</em></h3>
-                <span class="project-arrow">↗</span>
-              </div>
-              <p>
-                Visual identity, menu design and a little exploration into the
-                world of a neighbourhood ice cream business.
-              </p>
-              <div class="project-tags">
-                <span>BRANDING</span><span>DESIGN</span
-                ><span>SMALL BUSINESS</span>
-              </div>
-            </div>
-          </article>
-
-          <article
-            class="project-card project-secondary reveal"
-            tabindex="0"
-            role="button"
-            data-project="stockroom"
-            aria-label="Explore Stockroom concept"
-          >
-            <div class="project-visual project-visual-stock">
-              <div class="stock-window">
-                <div class="stock-window-top">
-                  <span></span><span></span><span></span><b>STOCKROOM / 001</b>
-                </div>
-                <div class="stock-window-body">
-                  <div class="stock-label">INVENTORY OVERVIEW</div>
-                  <div class="stock-big">01<span>—</span>∞</div>
-                  <div class="stock-bars">
-                    <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i
-                    ><i></i>
-                  </div>
-                  <div class="stock-bottom">
-                    <span>TRACK</span><span>UNDERSTAND</span
-                    ><span>IMPROVE</span>
-                  </div>
-                </div>
-              </div>
-              <span class="visual-number">02</span>
-            </div>
-            <div class="project-info">
-              <div class="project-topline">
-                <span>CONCEPT / TOOL EXPLORATION</span>
-                <span>IN PROGRESS</span>
-              </div>
-              <div class="project-title-row">
-                <h3>Stockroom<span class="title-period">.</span></h3>
-                <span class="project-arrow">↗</span>
-              </div>
-              <p>
-                An exploration of a simple way to understand stock, sales and
-                the everyday numbers behind a small business.
-              </p>
-              <div class="project-tags">
-                <span>PRODUCT THINKING</span><span>INTERFACE</span
-                ><span>CONCEPT</span>
-              </div>
-            </div>
-          </article>
-        </div>
-
-        <div class="exhibition-foot">
-          <span>THE COLLECTION IS OPEN-ENDED</span>
-          <span>MORE TO COME <b>↗</b></span>
-        </div>
-      </section>
-
-      <section class="laboratory-section" id="laboratory">
-        <div class="lab-background-mark">LAB</div>
-        <div class="section section-inner">
-          <div class="section-heading">
-            <span class="section-index">03 / THE LABORATORY</span>
-            <span class="section-note">WORK IN PROGRESS</span>
-          </div>
-
-          <div class="lab-heading reveal">
-            <span class="lab-stamp">NO FINAL<br />ANSWERS HERE</span>
-            <h2 class="editorial-heading">
-              An idea is<br />just the <em>beginning.</em>
-            </h2>
-          </div>
-
-          <p class="lab-intro reveal">
-            This is where curiosity gets its hands dirty. Unfinished thoughts,
-            prototypes, experiments and possibilities that may become something
-            more.
-          </p>
-
-          <div class="lab-grid">
-            <article class="lab-item reveal">
-              <span class="lab-item-number">LAB / 001</span>
-              <div class="lab-shape lab-shape-one"><span></span></div>
-              <h3>Interfaces with a point of view</h3>
-              <p>
-                Exploring how digital experiences can feel expressive, intuitive
-                and a little unexpected.
-              </p>
-              <span class="lab-status"><i></i> ONGOING INTEREST</span>
-            </article>
-            <article class="lab-item reveal">
-              <span class="lab-item-number">LAB / 002</span>
-              <div class="lab-shape lab-shape-two"><span></span></div>
-              <h3>Useful things, built simply</h3>
-              <p>
-                Thinking about small tools that solve real everyday problems
-                without unnecessary complexity.
-              </p>
-              <span class="lab-status"><i></i> EXPLORING</span>
-            </article>
-            <article class="lab-item reveal">
-              <span class="lab-item-number">LAB / 003</span>
-              <div class="lab-shape lab-shape-three"><span></span></div>
-              <h3>Technology as a creative medium</h3>
-              <p>
-                Finding the interesting territory between code, interaction,
-                visual art and experimentation.
-              </p>
-              <span class="lab-status"><i></i> OPEN ENDED</span>
-            </article>
-          </div>
-          <div class="lab-footer">
-            <span>EXPERIMENTS MAY CHANGE WITHOUT NOTICE.</span
-            ><span>THAT'S THE POINT. ↗</span>
-          </div>
-        </div>
-      </section>
-
-      <section class="section archive-section" id="archive">
-        <div class="section-heading">
-          <span class="section-index">04 / THE ARCHIVE</span>
-          <span class="section-note">FRAGMENTS OF A CURIOUS MIND</span>
-        </div>
-
-        <div class="archive-intro reveal">
-          <h2 class="editorial-heading">
-            A collection of<br /><em>things that stay with me.</em>
-          </h2>
-          <p>
-            Not a list of achievements. Just a few things that keep my mind
-            occupied.
-          </p>
-        </div>
-
-        <div class="archive-grid">
-          <div class="archive-card archive-card-large reveal">
-            <span class="archive-card-index">A / 001</span>
-            <div class="archive-visual archive-visual-film">
-              <div class="film-frame"><span>PLAY</span></div>
-              <div class="film-caption">THE ART OF SEEING</div>
-            </div>
-            <div class="archive-card-copy">
-              <span>01 — VISUAL CULTURE</span>
-              <h3>Music, film<br />& the feeling between frames.</h3>
-              <p>
-                Stories, sound, atmosphere and the details that make an
-                experience linger.
-              </p>
-            </div>
-          </div>
-
-          <div class="archive-card reveal">
-            <span class="archive-card-index">A / 002</span>
-            <div class="archive-visual archive-visual-ideas">
-              <div class="idea-orbit"><span>?</span></div>
-              <span class="idea-note">QUESTION EVERYTHING</span>
-            </div>
-            <div class="archive-card-copy">
-              <span>02 — CURIOSITY</span>
-              <h3>Questions worth following.</h3>
-              <p>
-                Ideas, rabbit holes and the pleasure of not knowing everything.
-              </p>
-            </div>
-          </div>
-
-          <div class="archive-card reveal">
-            <span class="archive-card-index">A / 003</span>
-            <div class="archive-visual archive-visual-form">
-              <div class="form-object"></div>
-              <span class="form-coordinate">FORM STUDY / 03</span>
-            </div>
-            <div class="archive-card-copy">
-              <span>03 — DESIGN & FORM</span>
-              <h3>Finding beauty in function.</h3>
-              <p>
-                Visual language, thoughtful details and the relationship between
-                form and purpose.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="manifesto-section">
-        <div class="manifesto-top">
-          <span>05 / A PERSONAL NOTE</span
-          ><span>NOT A MANIFESTO. JUST A REMINDER.</span>
-        </div>
-        <div class="manifesto-content reveal">
-          <span class="manifesto-mark">“</span>
-          <h2>Stay curious.<br />Make something.<br /><em>Begin again.</em></h2>
-        </div>
-        <div class="manifesto-bottom">
-          <span>THERE IS ALWAYS MORE TO DISCOVER.</span>
-          <span>— A.</span>
-        </div>
-      </section>
-
-      <section class="section contact-section" id="contact">
-        <div class="section-heading">
-          <span class="section-index">06 / OPEN CHANNEL</span>
-          <span class="section-note">END OF THE BEGINNING</span>
-        </div>
-
-        <div class="contact-layout">
-          <div class="contact-main reveal">
-            <span class="contact-overline">SOMETHING ON YOUR MIND?</span>
-            <h2 class="editorial-heading">
-              Let's see<br />where <em>it goes.</em>
-            </h2>
+          <div class="manifesto-copy">
             <p>
-              Ideas, interesting conversations, creative collaborations or
-              simply a hello. My inbox is open.
+              I have never been particularly interested in accepting the limits
+              of what already exists. I am drawn to the mechanisms behind things
+              — the hidden structures, the underlying logic and the
+              possibilities that emerge when seemingly unrelated ideas meet.
             </p>
-            <a
-              class="contact-email magnetic"
-              href="mailto:adeshmoha20@gmail.com"
-            >
-              <span>adeshmoha20@gmail.com</span><b>↗</b>
+
+            <p>
+              Technology gives me a language through which to explore those
+              possibilities. Mathematics offers another. Design, science,
+              architecture and art offer others.
+            </p>
+
+            <p>
+              I want to understand how things work, question why they work that
+              way, and develop the ability to create alternatives.
+            </p>
+
+            <p>
+              I am not presenting a finished mind or a completed body of work.
+              This is a record of a mind being developed through curiosity,
+              experimentation and the discipline of making things.
+            </p>
+          </div>
+        </div>
+
+        <div class="principles-grid">
+          <article class="principle">
+            <span class="principle-number">01</span>
+            <h3>Understand.</h3>
+            <p>
+              Go beneath the surface. Find the principles, mechanisms and
+              systems that make things work.
+            </p>
+          </article>
+
+          <article class="principle">
+            <span class="principle-number">02</span>
+            <h3>Question.</h3>
+            <p>
+              Challenge assumptions. Examine limitations. Explore what
+              conventional thinking overlooks.
+            </p>
+          </article>
+
+          <article class="principle">
+            <span class="principle-number">03</span>
+            <h3>Create.</h3>
+            <p>
+              Turn understanding and imagination into tangible experiments,
+              systems and experiences.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- 03. INTELLECTUAL TERRITORY -->
+      <section class="territory section" id="territory">
+        <div class="section-heading">
+          <span class="section-index">02 / INTELLECTUAL TERRITORY</span>
+          <span class="section-note">SUBJECTS THAT PULL ME IN</span>
+        </div>
+
+        <div class="territory-intro">
+          <h2>
+            Four directions.
+            <span class="serif-italic">Infinite questions.</span>
+          </h2>
+
+          <p>
+            My curiosity doesn't stay inside a single discipline. These are some
+            of the territories I want to explore, understand and eventually
+            contribute to.
+          </p>
+        </div>
+
+        <div class="territory-grid">
+          <article class="territory-card" data-number="01">
+            <div class="territory-visual territory-ai">
+              <span class="visual-symbol">◉</span>
+              <span class="visual-label">INTELLIGENCE / SYSTEMS</span>
+            </div>
+            <div class="territory-info">
+              <span class="mono-label">01 — COMPUTATIONAL INTELLIGENCE</span>
+              <h3>Artificial intelligence.</h3>
+              <p>
+                Intelligence, neural networks, machine creativity, autonomous
+                systems and the evolving relationship between humans and
+                machines.
+              </p>
+              <span class="territory-question">
+                Can intelligence be understood beyond its biological origins?
+              </span>
+            </div>
+          </article>
+
+          <article class="territory-card" data-number="02">
+            <div class="territory-visual territory-space">
+              <span class="visual-symbol">✳</span>
+              <span class="visual-label">COSMOLOGY / EXISTENCE</span>
+            </div>
+            <div class="territory-info">
+              <span class="mono-label">02 — THE COSMOS</span>
+              <h3>The universe.</h3>
+              <p>
+                Spacetime, cosmology, black holes, fundamental physics and the
+                extraordinary questions surrounding existence.
+              </p>
+              <span class="territory-question">
+                How much of reality remains beyond our ability to observe?
+              </span>
+            </div>
+          </article>
+
+          <article class="territory-card" data-number="03">
+            <div class="territory-visual territory-future">
+              <span class="visual-symbol">⌘</span>
+              <span class="visual-label">INVENTION / POSSIBILITY</span>
+            </div>
+            <div class="territory-info">
+              <span class="mono-label">03 — EMERGING SYSTEMS</span>
+              <h3>Future technology.</h3>
+              <p>
+                Advanced computing, robotics, immersive interfaces,
+                human-machine interaction and technologies that could redefine
+                everyday life.
+              </p>
+              <span class="territory-question">
+                What will become possible when today's technological limitations
+                disappear?
+              </span>
+            </div>
+          </article>
+
+          <article class="territory-card" data-number="04">
+            <div class="territory-visual territory-architecture">
+              <span class="visual-symbol">⌬</span>
+              <span class="visual-label">GEOMETRY / STRUCTURE</span>
+            </div>
+            <div class="territory-info">
+              <span class="mono-label">04 — COMPUTATIONAL DESIGN</span>
+              <h3>Architecture.</h3>
+              <p>
+                Spatial design, mathematical geometry, parametric structures and
+                the relationship between engineering and beauty.
+              </p>
+              <span class="territory-question">
+                What could architecture become if we rethought its fundamental
+                rules?
+              </span>
+            </div>
+          </article>
+        </div>
+
+        <p class="territory-disclaimer">
+          Areas of curiosity and exploration — not claims of professional
+          expertise.
+        </p>
+      </section>
+
+      <!-- 04. SELECTED WORK -->
+      <section class="work section" id="work">
+        <div class="section-heading">
+          <span class="section-index">03 / SELECTED WORK</span>
+          <span class="section-note">IDEAS MEETING REALITY</span>
+        </div>
+
+        <div class="work-intro">
+          <h2>
+            Things I have
+            <span class="serif-italic">put into motion.</span>
+          </h2>
+
+          <p>
+            A growing collection of contributions, independent builds and
+            product explorations. Not everything is finished. Everything has a
+            story.
+          </p>
+        </div>
+
+        <!-- PROJECT ONE -->
+        <article class="project project-featured">
+          <div class="project-visual project-icecream">
+            <div class="project-visual-text">
+              <span>ALBANIAN</span>
+              <span class="serif-italic">ICE CREAM</span>
+              <span>VISUAL IDENTITY / BRAND EXPERIENCE</span>
+            </div>
+            <span class="project-visual-index">PROJECT 001</span>
+          </div>
+
+          <div class="project-details">
+            <div class="project-meta">
+              <span>01 / BRANDING & DESIGN</span>
+              <span>CONTRIBUTION</span>
+            </div>
+
+            <h3>Giving a business a visual voice.</h3>
+
+            <p class="project-description">
+              A creative contribution to an existing family ice cream business.
+              The work explored how a distinctive visual identity could give the
+              business a more recognisable personality.
+            </p>
+
+            <div class="project-contribution">
+              <span class="mono-label">MY CONTRIBUTION</span>
+              <p>
+                Logo design, menu design and visual direction. Exploring the
+                balance between a premium heritage-inspired aesthetic and a
+                younger, more expressive visual language.
+              </p>
+            </div>
+
+            <div class="project-tags">
+              <span>Visual identity</span>
+              <span>Graphic design</span>
+              <span>Brand exploration</span>
+            </div>
+
+            <a href="#case-icecream" class="project-link">
+              EXPLORE THE PROJECT <span>↗</span>
             </a>
           </div>
-          <div class="contact-aside reveal">
-            <div class="contact-orbit">
-              <span>A</span>
-              <i></i><i></i><i></i>
+        </article>
+
+        <!-- PROJECT TWO -->
+        <article class="project">
+          <div class="project-visual project-portfolio">
+            <div class="portfolio-art-text">
+              <span>A WORLD</span>
+              <span class="serif-italic">IN PROGRESS.</span>
             </div>
-            <span class="contact-aside-caption">A SIGNAL FROM NAIROBI</span>
-            <span class="contact-aside-small"
-              >AVAILABLE FOR<br />INTERESTING CONVERSATIONS</span
-            >
+            <span class="project-visual-index">PROJECT 002</span>
+          </div>
+
+          <div class="project-details">
+            <div class="project-meta">
+              <span>02 / DIGITAL EXPERIENCE</span>
+              <span>INDEPENDENT BUILD</span>
+            </div>
+
+            <h3>A portfolio that becomes a world.</h3>
+
+            <p class="project-description">
+              An ongoing experiment in turning a personal portfolio into
+              something more immersive than a conventional collection of
+              webpages.
+            </p>
+
+            <div class="project-contribution">
+              <span class="mono-label">THE EXPLORATION</span>
+              <p>
+                Interactive experiences, generative visuals, custom
+                interactions, responsive layouts and an evolving editorial
+                identity.
+              </p>
+            </div>
+
+            <div class="project-tags">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>Creative coding</span>
+            </div>
+
+            <a href="#case-portfolio" class="project-link">
+              EXPLORE THE PROJECT <span>↗</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- PROJECT THREE -->
+        <article class="project">
+          <div class="project-visual project-stockroom">
+            <div class="stockroom-art">
+              <span>STOCK</span>
+              <span class="serif-italic">ROOM.</span>
+              <span class="mono-label">A PRODUCT EXPLORATION</span>
+            </div>
+            <span class="project-visual-index">PROJECT 003</span>
+          </div>
+
+          <div class="project-details">
+            <div class="project-meta">
+              <span>03 / PRODUCT THINKING</span>
+              <span>CONCEPT / EXPLORATION</span>
+            </div>
+
+            <h3>Making everyday business operations easier.</h3>
+
+            <p class="project-description">
+              An exploration of a simple stock and sales management tool
+              inspired by the operational needs of a small retail business.
+            </p>
+
+            <div class="project-contribution">
+              <span class="mono-label">THE PROBLEM SPACE</span>
+              <p>
+                Understanding stock movement, product costs, sales quantities
+                and the information a small business needs to make better
+                decisions.
+              </p>
+            </div>
+
+            <div class="project-tags">
+              <span>Product thinking</span>
+              <span>Business systems</span>
+              <span>Concept development</span>
+            </div>
+
+            <a href="#case-stockroom" class="project-link">
+              EXPLORE THE CONCEPT <span>↗</span>
+            </a>
+          </div>
+        </article>
+      </section>
+
+      <!-- 05. PROJECT CASE STUDIES -->
+      <section class="case-studies section" id="case-studies">
+        <div class="section-heading">
+          <span class="section-index">04 / BEHIND THE WORK</span>
+          <span class="section-note">PROCESS / REASONING / DEVELOPMENT</span>
+        </div>
+
+        <div class="case-study" id="case-icecream">
+          <div class="case-header">
+            <span class="mono-label">CASE STUDY 001</span>
+            <h2>Albanian Ice Cream</h2>
+            <p>Giving an existing business a distinct visual identity.</p>
+          </div>
+
+          <div class="case-body">
+            <div class="case-block">
+              <span class="mono-label">01 — CONTEXT</span>
+              <h3>A business is more than its product.</h3>
+              <p>
+                A customer doesn't experience a product in isolation. They
+                encounter its name, visual identity, menu, presentation and
+                personality. These elements influence how a business is
+                recognised and remembered.
+              </p>
+            </div>
+
+            <div class="case-block">
+              <span class="mono-label">02 — THE DIRECTION</span>
+              <h3>Heritage meets youthful expression.</h3>
+              <p>
+                The visual direction explored a meeting between premium,
+                heritage-inspired branding and expressive contemporary graphics.
+                The intention was to avoid an identity that felt either overly
+                traditional or generic.
+              </p>
+            </div>
+
+            <div class="case-block">
+              <span class="mono-label">03 — MY ROLE</span>
+              <h3>Turning direction into visual material.</h3>
+              <p>
+                I contributed to the logo, menu and visual exploration. The work
+                gave me an opportunity to think about how design decisions
+                relate to a real business and its customers.
+              </p>
+            </div>
+
+            <div class="case-block">
+              <span class="mono-label">04 — REFLECTION</span>
+              <h3>Design has to function beyond appearance.</h3>
+              <p>
+                A visual identity must work in the everyday reality of a
+                business. Recognition, clarity, consistency and practical use
+                matter just as much as the initial visual impression.
+              </p>
+            </div>
+          </div>
+
+          <div class="case-status">
+            <span>STATUS</span>
+            <span>DESIGN CONTRIBUTION COMPLETED</span>
+          </div>
+        </div>
+
+        <div class="case-study" id="case-portfolio">
+          <div class="case-header">
+            <span class="mono-label">CASE STUDY 002</span>
+            <h2>The evolving portfolio</h2>
+            <p>Building a digital environment rather than a template.</p>
+          </div>
+
+          <div class="case-body">
+            <div class="case-block">
+              <span class="mono-label">01 — THE QUESTION</span>
+              <h3>Why should a portfolio behave like every other website?</h3>
+              <p>
+                Most portfolios follow familiar patterns. I wanted to explore a
+                more personal approach where navigation, motion, visual
+                composition and interaction contribute to the experience.
+              </p>
+            </div>
+
+            <div class="case-block">
+              <span class="mono-label">02 — THE APPROACH</span>
+              <h3>Experiment with the medium itself.</h3>
+              <p>
+                The project uses web technologies to explore visual identity,
+                interactive elements, responsive design and generative graphics.
+                It is also an exercise in organising a growing body of work.
+              </p>
+            </div>
+
+            <div class="case-block">
+              <span class="mono-label">03 — THE DEVELOPMENT</span>
+              <h3>A system that can evolve.</h3>
+              <p>
+                The portfolio is being developed as an ongoing project. Its
+                structure and visual language will evolve as new experiments,
+                projects and capabilities emerge.
+              </p>
+            </div>
+
+            <div class="case-block">
+              <span class="mono-label">04 — THE OBJECTIVE</span>
+              <h3>Make exploration meaningful.</h3>
+              <p>
+                Visual spectacle alone is not enough. The experience should help
+                visitors discover the thinking, process and work behind the
+                person presenting it.
+              </p>
+            </div>
+          </div>
+
+          <div class="case-status">
+            <span>STATUS</span>
+            <span>ACTIVE DEVELOPMENT</span>
+          </div>
+        </div>
+
+        <div class="case-study" id="case-stockroom">
+          <div class="case-header">
+            <span class="mono-label">CASE STUDY 003</span>
+            <h2>Stockroom</h2>
+            <p>A product concept exploring simpler business management.</p>
+          </div>
+
+          <div class="case-body">
+            <div class="case-block">
+              <span class="mono-label">01 — THE OBSERVATION</span>
+              <h3>Small businesses deal with complex everyday information.</h3>
+              <p>
+                Inventory and sales involve quantities, purchase costs, selling
+                prices, stock movement and revenue. Keeping track of these
+                details can become difficult without a clear system.
+              </p>
+            </div>
+
+            <div class="case-block">
+              <span class="mono-label">02 — THE IDEA</span>
+              <h3>Make useful information easier to understand.</h3>
+              <p>
+                Stockroom explores the idea of a lightweight tool that could
+                help a small business monitor inventory and understand its
+                sales.
+              </p>
+            </div>
+
+            <div class="case-block">
+              <span class="mono-label">03 — THE PRODUCT QUESTIONS</span>
+              <h3>What does the user actually need?</h3>
+              <p>
+                How should stock be recorded? What happens when products are
+                sold? How can costs and revenue be presented clearly? Which
+                calculations should happen automatically?
+              </p>
+            </div>
+
+            <div class="case-block">
+              <span class="mono-label">04 — THE NEXT CHALLENGE</span>
+              <h3>Move from concept to a tested product.</h3>
+              <p>
+                The concept needs further development, interface decisions and
+                practical testing before it can be presented as a functioning
+                inventory management product.
+              </p>
+            </div>
+          </div>
+
+          <div class="case-status">
+            <span>STATUS</span>
+            <span>CONCEPT / EXPLORATION</span>
           </div>
         </div>
       </section>
+
+      <!-- 06. LABORATORY -->
+      <section class="laboratory section" id="laboratory">
+        <div class="section-heading">
+          <span class="section-index">05 / THE LABORATORY</span>
+          <span class="section-note">EXPERIMENTS / PROTOTYPES / CURIOSITY</span>
+        </div>
+
+        <div class="lab-intro">
+          <h2>
+            Not every idea<br />
+            <span class="serif-italic">needs to become a product.</span>
+          </h2>
+
+          <p>
+            Some ideas are experiments. Some are questions disguised as
+            prototypes. Some exist simply because I want to know whether
+            something can be done.
+          </p>
+        </div>
+
+        <div class="lab-grid">
+          <article class="lab-card">
+            <div class="lab-art lab-art-01">
+              <span>01</span>
+              <div class="lab-orbit"></div>
+            </div>
+            <div class="lab-card-info">
+              <span class="mono-label"
+                >INTERACTION / THREE-DIMENSIONAL SPACE</span
+              >
+              <h3>Objects with a presence.</h3>
+              <p>
+                Exploring how digital objects can respond to movement, attention
+                and user interaction.
+              </p>
+              <span class="lab-status">EXPERIMENTAL DIRECTION</span>
+            </div>
+          </article>
+
+          <article class="lab-card">
+            <div class="lab-art lab-art-02">
+              <span>02</span>
+              <div class="lab-grid-art"></div>
+            </div>
+            <div class="lab-card-info">
+              <span class="mono-label">COMPUTATIONAL DESIGN</span>
+              <h3>Geometry in motion.</h3>
+              <p>
+                Exploring how mathematical rules can generate complex visual
+                structures.
+              </p>
+              <span class="lab-status">EXPLORATION</span>
+            </div>
+          </article>
+
+          <article class="lab-card">
+            <div class="lab-art lab-art-03">
+              <span>03</span>
+              <div class="lab-particles"></div>
+            </div>
+            <div class="lab-card-info">
+              <span class="mono-label">GENERATIVE SYSTEMS</span>
+              <h3>Order from complexity.</h3>
+              <p>
+                Investigating how simple rules can produce intricate and
+                unpredictable behaviour.
+              </p>
+              <span class="lab-status">IDEA / RESEARCH</span>
+            </div>
+          </article>
+
+          <article class="lab-card">
+            <div class="lab-art lab-art-04">
+              <span>04</span>
+              <div class="lab-wave"></div>
+            </div>
+            <div class="lab-card-info">
+              <span class="mono-label">HUMAN COMPUTER INTERACTION</span>
+              <h3>Interfaces that feel alive.</h3>
+              <p>
+                Exploring more expressive ways for people to interact with
+                digital environments.
+              </p>
+              <span class="lab-status">EXPLORATION</span>
+            </div>
+          </article>
+        </div>
+
+        <p class="lab-footnote">
+          These are experimental directions, not claims of completed or deployed
+          projects.
+        </p>
+      </section>
+
+      <!-- 07. THE IMPOSSIBLE -->
+      <section class="impossible section" id="impossible">
+        <div class="section-heading">
+          <span class="section-index">06 / THE IMPOSSIBLE</span>
+          <span class="section-note">SPECULATIVE THINKING</span>
+        </div>
+
+        <div class="impossible-content">
+          <span class="mono-label"
+            >A COLLECTION OF UNFINISHED POSSIBILITIES</span
+          >
+
+          <h2>
+            What if the things<br />
+            <span class="serif-italic">we imagine</span><br />
+            become the things<br />
+            we build?
+          </h2>
+
+          <p>
+            This is a space for ideas that are not yet projects. Questions that
+            may become research. Concepts that may eventually become prototypes.
+          </p>
+
+          <div class="impossible-list">
+            <article class="impossible-item">
+              <span>001</span>
+              <div>
+                <h3>Intelligence without conventional interfaces.</h3>
+                <p>
+                  What would interaction with an intelligent system look like if
+                  it didn't depend on screens, keyboards or familiar commands?
+                </p>
+              </div>
+              <span class="idea-status">QUESTION</span>
+            </article>
+
+            <article class="impossible-item">
+              <span>002</span>
+              <div>
+                <h3>Architecture that computes.</h3>
+                <p>
+                  Could a structure adapt its form and behaviour in response to
+                  its environment?
+                </p>
+              </div>
+              <span class="idea-status">HYPOTHESIS</span>
+            </article>
+
+            <article class="impossible-item">
+              <span>003</span>
+              <div>
+                <h3>New ways to experience information.</h3>
+                <p>
+                  Could complex information become something people navigate and
+                  experience spatially, rather than simply read?
+                </p>
+              </div>
+              <span class="idea-status">EXPLORATION</span>
+            </article>
+          </div>
+
+          <p class="impossible-footnote">
+            Speculative questions. Not established discoveries or claims of
+            original invention.
+          </p>
+        </div>
+      </section>
+
+      <!-- 08. OBSERVATORY -->
+      <section class="observatory section" id="observatory">
+        <div class="section-heading">
+          <span class="section-index">07 / THE OBSERVATORY</span>
+          <span class="section-note">QUESTIONS BEYOND THE SCREEN</span>
+        </div>
+
+        <div class="observatory-intro">
+          <h2>
+            Looking outward.<br />
+            <span class="serif-italic">Thinking further.</span>
+          </h2>
+
+          <p>
+            A place for the subjects I want to understand more deeply — and the
+            questions that keep expanding as I learn.
+          </p>
+        </div>
+
+        <div class="observation-grid">
+          <article class="observation">
+            <span class="mono-label">COSMOLOGY / 001</span>
+            <h3>What does it mean for the universe to have an edge?</h3>
+            <p>
+              Exploring the distinction between the observable universe and the
+              universe as a whole.
+            </p>
+            <span class="observation-type">QUESTION TO EXPLORE</span>
+          </article>
+
+          <article class="observation">
+            <span class="mono-label">ARTIFICIAL INTELLIGENCE / 002</span>
+            <h3>What would it actually mean for a machine to understand?</h3>
+            <p>
+              Examining intelligence, representation, reasoning and the limits
+              of current AI systems.
+            </p>
+            <span class="observation-type">QUESTION TO EXPLORE</span>
+          </article>
+
+          <article class="observation">
+            <span class="mono-label">ARCHITECTURE / 003</span>
+            <h3>Can mathematical beauty become physical space?</h3>
+            <p>
+              Exploring the relationship between geometry, structure,
+              computation and architecture.
+            </p>
+            <span class="observation-type">QUESTION TO EXPLORE</span>
+          </article>
+
+          <article class="observation">
+            <span class="mono-label">FUTURE TECHNOLOGY / 004</span>
+            <h3>How will humans experience computing in the future?</h3>
+            <p>
+              Considering interfaces beyond the familiar desktop, mobile and
+              screen-based paradigms.
+            </p>
+            <span class="observation-type">QUESTION TO EXPLORE</span>
+          </article>
+        </div>
+      </section>
+
+      <!-- 09. WORKSHOP -->
+      <section class="workshop section" id="workshop">
+        <div class="section-heading">
+          <span class="section-index">08 / THE WORKSHOP</span>
+          <span class="section-note">TOOLS / CAPABILITIES / DEVELOPMENT</span>
+        </div>
+
+        <div class="workshop-intro">
+          <h2>
+            The tools are important.<br />
+            <span class="serif-italic">The thinking comes first.</span>
+          </h2>
+
+          <p>
+            My technical practice is developing through independent building,
+            experimentation and continued learning.
+          </p>
+        </div>
+
+        <div class="capability-groups">
+          <div class="capability-group">
+            <span class="mono-label">01 — CURRENTLY USED</span>
+            <h3>Web foundations</h3>
+            <div class="capability-tags">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>GitHub</span>
+              <span>GitHub Pages</span>
+            </div>
+          </div>
+
+          <div class="capability-group">
+            <span class="mono-label">02 — CURRENT EXPLORATIONS</span>
+            <h3>Creative technology</h3>
+            <div class="capability-tags">
+              <span>Three-dimensional web experiences</span>
+              <span>Creative coding</span>
+              <span>Interactive design</span>
+              <span>Product concepts</span>
+            </div>
+          </div>
+
+          <div class="capability-group">
+            <span class="mono-label">03 — AREAS OF STUDY</span>
+            <h3>Knowledge in development</h3>
+            <div class="capability-tags">
+              <span>Artificial intelligence</span>
+              <span>Computational geometry</span>
+              <span>Mathematics</span>
+              <span>Systems thinking</span>
+              <span>Emerging technology</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="capability-note">
+          This is a record of my current practice and interests, not a
+          declaration of mastery in every listed area.
+        </p>
+      </section>
+
+      <!-- 10. PERSONAL ARCHIVE -->
+      <section class="archive section" id="archive">
+        <div class="section-heading">
+          <span class="section-index">09 / THE ARCHIVE</span>
+          <span class="section-note">THOUGHTS / NOTES / PERSPECTIVES</span>
+        </div>
+
+        <div class="archive-intro">
+          <h2>
+            A mind is also<br />
+            <span class="serif-italic">what it collects.</span>
+          </h2>
+
+          <p>
+            Observations, unfinished thoughts, questions and ideas worth
+            returning to. A growing record of the things that shape my thinking.
+          </p>
+        </div>
+
+        <div class="archive-entries">
+          <article class="archive-entry">
+            <span class="archive-number">001</span>
+            <div class="archive-entry-content">
+              <span class="mono-label">ON TECHNOLOGY / PERSONAL NOTE</span>
+              <h3>Technology should expand the imagination.</h3>
+              <p>
+                I am interested in technology not simply because of what it can
+                automate, but because of the new possibilities it can make
+                accessible.
+              </p>
+            </div>
+            <span class="archive-arrow">↗</span>
+          </article>
+
+          <article class="archive-entry">
+            <span class="archive-number">002</span>
+            <div class="archive-entry-content">
+              <span class="mono-label">ON LEARNING / PERSONAL NOTE</span>
+              <h3>Understanding is different from memorising.</h3>
+              <p>
+                Knowing an answer is useful. Understanding why that answer works
+                is what allows you to approach a new problem.
+              </p>
+            </div>
+            <span class="archive-arrow">↗</span>
+          </article>
+
+          <article class="archive-entry">
+            <span class="archive-number">003</span>
+            <div class="archive-entry-content">
+              <span class="mono-label">ON CREATIVITY / PERSONAL NOTE</span>
+              <h3>Interesting ideas live between disciplines.</h3>
+              <p>
+                The most unexpected possibilities often appear when ideas from
+                different fields begin to interact.
+              </p>
+            </div>
+            <span class="archive-arrow">↗</span>
+          </article>
+        </div>
+
+        <p class="archive-note">
+          An evolving collection. More entries will be added as the archive
+          grows.
+        </p>
+      </section>
+
+      <!-- 11. PERSONAL JOURNEY -->
+      <section class="journey section" id="journey">
+        <div class="section-heading">
+          <span class="section-index">10 / THE JOURNEY</span>
+          <span class="section-note">A WORK IN PROGRESS</span>
+        </div>
+
+        <div class="journey-content">
+          <h2>
+            Still becoming.<br />
+            <span class="serif-italic">Always exploring.</span>
+          </h2>
+
+          <div class="journey-copy">
+            <p>
+              My relationship with technology and creation is still evolving. I
+              am interested in the intersection of computer science, design,
+              scientific curiosity and practical problem-solving.
+            </p>
+
+            <p>
+              I don't believe a person's intellectual development ends with a
+              qualification, a project or a particular milestone. There is
+              always another subject to understand, another assumption to
+              question and another possibility to explore.
+            </p>
+
+            <p>
+              This portfolio is one expression of that ongoing process. It will
+              change as I do.
+            </p>
+          </div>
+
+          <div class="journey-signature">
+            <span>ADESH</span>
+            <span class="serif-italic">In progress, by design.</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 12. CONTACT -->
+      <section class="contact section" id="contact">
+        <div class="section-heading">
+          <span class="section-index">11 / CONNECTION</span>
+          <span class="section-note">OPEN TO INTERESTING POSSIBILITIES</span>
+        </div>
+
+        <div class="contact-content">
+          <span class="mono-label">HAVE SOMETHING INTERESTING IN MIND?</span>
+
+          <h2>
+            Let's make<br />
+            <span class="serif-italic">something matter.</span>
+          </h2>
+
+          <p>
+            Interesting ideas, thoughtful collaborations, ambitious projects and
+            conversations that lead somewhere unexpected.
+          </p>
+
+          <a href="mailto:adeshmoha20@gmail.com" class="contact-email">
+            START A CONVERSATION <span>↗</span>
+          </a>
+
+          <div class="social-links">
+            <a
+              href="https://github.com/unknownuser9676"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GITHUB ↗
+            </a>
+
+            <a href="mailto:adeshmoha20@gmail.com"> EMAIL ↗ </a>
+          </div>
+        </div>
+
+        <footer class="site-footer">
+          <a href="#home" class="footer-brand">ADESH®</a>
+
+          <span>A WORLD IN PROGRESS.</span>
+
+          <span>© <span id="currentYear"></span> ADESH</span>
+
+          <a href="#top" class="back-to-top">BACK TO TOP ↑</a>
+        </footer>
+      </section>
     </main>
+    <div class="secret-room" id="secretRoom" hidden>
+      <div class="secret-room-backdrop"></div>
 
-    <footer class="footer">
-      <a class="footer-mark" href="#home">A.</a>
-      <div class="footer-middle">
-        <span>A PERSONAL DIGITAL UNIVERSE</span>
-        <span>MADE WITH CURIOSITY IN NAIROBI, KENYA.</span>
-      </div>
-      <div class="footer-right">
-        <a
-          href="https://mail.google.com/mail/?view=cm&fs=1&to=adeshmoha20%40gmail.com&su=Hello%20Adesh"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="contact-email magnetic"
+      <div class="secret-room-content">
+        <button
+          class="secret-room-close"
+          id="closeSecretRoom"
+          aria-label="Close secret room"
         >
-          Let's talk
-          <b>↗</b>
-        </a>
-        <a href="#home">BACK TO THE BEGINNING ↑</a>
+          X
+        </button>
+
+        <span class="secret-room-label">A PLACE BETWEEN THOUGHTS · 001</span>
+
+        <h2>Not everything<br />needs an audience.</h2>
+
+        <div class="secret-room-line"></div>
+
+        <p class="secret-room-note">
+          If you've found your way here, you're probably the kind of person who
+          looks a little closer.
+        </p>
+
+        <p class="secret-room-note">
+          This is a space for the things that don't quite fit anywhere else.
+          Ideas without names. Experiments without conclusions. Questions that
+          refuse to leave.
+        </p>
+
+        <div class="secret-room-thought">
+          <span>AN UNFINISHED THOUGHT</span>
+          <p>
+            What if the most interesting thing you ever create is something you
+            haven't imagined yet?
+          </p>
+        </div>
+
+        <span class="secret-room-signature">A. / STILL BECOMING</span>
       </div>
-      <div class="footer-bottom">
-        <span>© ADESH 2026</span>
-        <span>NO FINISHED STORIES. JUST NEW CHAPTERS.</span>
-        <span>END / 006</span>
-      </div>
-    </footer>
-
-    <div
-      class="project-modal"
-      id="project-modal"
-      aria-hidden="true"
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="modal-title"
-    >
-      <button
-        class="modal-close"
-        id="modal-close"
-        aria-label="Close project details"
-      >
-        CLOSE <span>×</span>
-      </button>
-      <div class="modal-content" id="modal-content"></div>
-    </div>
-
-    <div
-      class="secret-message"
-      id="secret-message"
-      role="status"
-      aria-live="polite"
-    >
-      <span>YOU FOUND SOMETHING.</span>
-      <p>Not everything needs to be discovered at once.</p>
-      <button id="secret-close">CLOSE ×</button>
-    </div>
-
-    <div class="page-progress" aria-hidden="true">
-      <span id="page-progress-fill"></span>
     </div>
   </body>
 </html>
